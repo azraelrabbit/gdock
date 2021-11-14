@@ -65,3 +65,4 @@ rm -rf Source code (zip)
 rm -rf Source code (tar.gz)
 EOF
 
+mkdir -p files/etc/hotplug.d/block && curl -fsSL https://raw.githubusercontent.com/281677160/openwrt-package/usb/block/10-mount > files/etc/hotplug.d/block/10-mount
