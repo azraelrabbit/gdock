@@ -52,9 +52,15 @@ sed -i 's/"Argon 主题设置"/"Argon设置"/g' `grep "Argon 主题设置" -rl .
 
 # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间
 cat >${GITHUB_WORKSPACE}/Clear <<-EOF
+rm -rf openwrt-ipq40xx-p2w_r619ac-128m-initramfs-fit-zImage.itb
+rm -rf openwrt-ipq40xx-p2w_r619ac-128m-squashfs-nand-factory.ubi
+rm -rf openwrt-ipq40xx-p2w_r619ac-128m.manifest
 rm -rf config.buildinfo
 rm -rf feeds.buildinfo
+rm -rf version.buildinfo
 rm -rf sha256sums
 rm -rf version.buildinfo
+rm -rf Source code (zip)
+rm -rf Source code (tar.gz)
 EOF
 
