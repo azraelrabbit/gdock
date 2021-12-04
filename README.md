@@ -17,6 +17,12 @@ cd openwrt && make menuconfig
 
 编译成功跟失败都邮件通知--右上角头像-->Settings-->Notifications的差不多最下面找到《Send notifications for failed workflows only》把前面的勾去掉就好了
 
+常用网址：
+- >1、[插件仓库liuran001](https://github.com/liuran001/openwrt-packages)
+- >2、[插件仓库kenzok8](https://github.com/kenzok8/openwrt-packages)
+- >3、[插件应用说明](https://www.right.com.cn/forum/thread-3682029-1-1.html)
+- >4、[自用插件列表](https://github.com/gdstchdr1/software/blob/main/%E6%8F%92%E4%BB%B6%E4%B8%AD%E8%8B%B1%E6%96%87%E5%90%8D%E7%A7%B0%E5%AF%B9%E7%85%A7%E8%A1%A8.txt)
+
 
 - # 择要
 ---
