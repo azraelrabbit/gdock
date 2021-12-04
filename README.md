@@ -10,7 +10,7 @@ cd openwrt && make menuconfig
 - >1、Global build settings ---> Enable IPv6 support in packages (NEW)（选上） 
 - >2、Extra packages ---> ipv6helper（选上） 
 - >3、安装好固件后在-网络-DHCP/DNS里的高级设置-把“禁止解析 IPv6 DNS 记录”的“√”去掉
-- >3、luci-app-dockerman 和 luci-app-docker 只能二选一，
+- >4、luci-app-dockerman 和 luci-app-docker 只能二选一，
 想要编译luci-app-dockerman或者luci-app-docker
 首先要在Global build settings ---> Enable IPv6 support in packages (NEW)（选上）
 选择dockerman或docker建议选上luci-app-diskman方便挂盘所用
