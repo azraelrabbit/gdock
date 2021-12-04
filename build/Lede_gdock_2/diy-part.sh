@@ -60,8 +60,8 @@ rm -rf config.buildinfo
 rm -rf feeds.buildinfo
 rm -rf version.buildinfo
 rm -rf sha256sums
-#rm -rf Source code (zip)
-#rm -rf Source code (tar.gz)
+rm -rf Source code (zip)
+rm -rf Source code (tar.gz)
 EOF
 
 mkdir -p files/etc/hotplug.d/block && curl -fsSL https://raw.githubusercontent.com/281677160/openwrt-package/usb/block/10-mount > files/etc/hotplug.d/block/10-mount
