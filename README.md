@@ -75,10 +75,10 @@ op自带的ttyd或者用putty连接OP都可以，用了命令后会一直使用�
 - 《[编译出错时查看日志方法](https://github.com/danshui-git/shuoming/blob/master/errors.md)》
 - 《[修改文件跟删除仓库](https://github.com/danshui-git/shuoming/blob/master/%E5%88%A0%E9%99%A4%E5%92%8C%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6.md)》
 #
-- == 交流 ==
+- #== 交流 ==
 - 《[Telegram聊天吹水群](https://t.me/heiheiheio)》- 《[Telegram中文设置方法](https://github.com/danshui-git/shuoming/blob/master/tele.md)》
 #
-- == 鸣谢 ==
+- #== 鸣谢 ==
 > [`coolsnowwolf`](https://github.com/coolsnowwolf/lede.git)
 > [`Lienol`](https://github.com/Lienol/openwrt.git)
 > [`ctcgfw`](https://github.com/project-openwrt/openwrt.git)
