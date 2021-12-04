@@ -40,9 +40,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [Lede_gdock_2]
+        target: [Lede_gdock_610]
         
-        # [Lede_source,Lienol_source,Mortal_source,Tianling_source,openwrt_amlogic]
+        # [Lede_source,Lienol_source,Mortal_source,Tianling_source,openwrt_amlogic,Lede_gdock_610]
 
     steps:
     - name: 准备结束
