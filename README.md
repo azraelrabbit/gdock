@@ -1,5 +1,3 @@
-- 《[Telegram聊天吹水群](https://t.me/heiheiheio)》- 《[Telegram中文设置方法](https://github.com/danshui-git/shuoming/blob/master/tele.md)》
-
 - # 择要
 ---
 - 2021/10/29号更新
@@ -86,6 +84,9 @@ op自带的ttyd或者用putty连接OP都可以，用了命令后会一直使用�
 # <img src="https://github.com/danshui-git/shuoming/blob/master/doc/weixin4.png" />
 #
 #
+- # 交流
+- 《[Telegram聊天吹水群](https://t.me/heiheiheio)》- 《[Telegram中文设置方法](https://github.com/danshui-git/shuoming/blob/master/tele.md)》
+
 - # 鸣谢
 > [`coolsnowwolf`](https://github.com/coolsnowwolf/lede.git)
 > [`Lienol`](https://github.com/Lienol/openwrt.git)
