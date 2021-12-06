@@ -16,7 +16,7 @@ on:
     branches:
       - main
     paths:
-      - 'build/Lede_gdock_2/start-up/start'
+      - 'build/Lede_XiaoMi_cr660x/start-up/start'
 
 env:
   Github: https://github.com/${{github.repository}}
@@ -42,7 +42,7 @@ jobs:
       matrix:
         target: [Lede_XiaoMi_cr660x]
         
-        # [Lede_source,Lienol_source,Mortal_source,Tianling_source,openwrt_amlogic,Lede_gdock_610]
+        # [Lede_source,Lienol_source,Mortal_source,Tianling_source,openwrt_amlogic]
 
     steps:
     - name: 准备结束
