@@ -1,0 +1,11 @@
+#! /bin/sh
+uci del network.guest
+uci commit network
+uci del wireless.guest
+uci commit wireless
+uci del dhcp.guest
+uci commit dhcp
+uci del firewall.@zone[2]
+uci commit firewall
+uci del firewall.@forwarding[1]
+uci commit firewall

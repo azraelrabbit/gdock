@@ -1,0 +1,10 @@
+
+config eqos
+	option download '500'
+	option upload '100'
+	option enabled '0'
+
+config device
+
+config device
+
