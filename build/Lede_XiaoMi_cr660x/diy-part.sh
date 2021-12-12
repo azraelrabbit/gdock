@@ -18,9 +18,9 @@ uci commit network                                                           # �
 #uci commit dhcp                                                             # 跟‘关闭DHCP功能’联动,同时启用或者删除跟注释
 uci set system.@system[0].hostname='XiaoMi'                                  # 修改主机名称为XiaoMi
 sed -i 's/\/bin\/login/\/bin\/login -f root/' /etc/config/ttyd               # 设置ttyd免帐号登录，如若开启，进入OPENWRT后可能要重启一次才生效
-uci set wireless.default_radio${devidx}.ssid=ysy001              #wifi名称
-uci set wireless.default_radio${devidx}.encryption=psk2          #wifi加密方式，没有是none
-uci set wireless.default_radio${devidx}.key=88294499             #wifi密码
+uci set wireless.default_radi0${devidx}.ssid=ysy001              #wifi名称
+uci set wireless.default_radi0${devidx}.encryption=psk2          #wifi加密方式，没有是none
+uci set wireless.default_radi0${devidx}.key=88294499             #wifi密码
 uci set wireless.default_radi1${devidx}.ssid=602                 #wifi名称
 uci set wireless.default_radi1${devidx}.encryption=psk2          #wifi加密方式，没有是none
 uci set wireless.default_radi1${devidx}.key=88294499             #wifi密码
