@@ -31,6 +31,12 @@ sed -i '/CYXluq4wUazHjmCDBCqXF/d' $ZZZ                                          
 # K3专用，编译K3的时候只会出K3固件
 #sed -i 's|^TARGET_|# TARGET_|g; s|# TARGET_DEVICES += phicomm_k3|TARGET_DEVICES += phicomm_k3|' target/linux/bcm53xx/image/Makefile
 
+uci set wireless.default_radio${devidx}.ssid=ysy001              #wifi名称
+uci set wireless.default_radio${devidx}.encryption=psk2          #wifi加密方式，没有是none
+uci set wireless.default_radio${devidx}.key=88294499             #wifi密码
+uci set wireless.default_radi1${devidx}.ssid=602                 #wifi名称
+uci set wireless.default_radi1${devidx}.encryption=psk2          #wifi加密方式，没有是none
+uci set wireless.default_radi1${devidx}.key=88294499             #wifi密码
 
 # 在线更新时，删除不想保留固件的某个文件，在EOF跟EOF直接加入删除代码，记住这里对应的是固件的文件路径，比如： rm /etc/config/luci
 cat >$DELETE <<-EOF
