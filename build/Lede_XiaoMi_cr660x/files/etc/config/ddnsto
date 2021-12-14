@@ -1,5 +1,0 @@
-
-config ddnsto
-	option enabled '1'
-	option token '6f0d3dde-a4ef-495d-b5fb-bcfc43cc2393'
-
