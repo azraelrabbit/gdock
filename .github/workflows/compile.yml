@@ -16,7 +16,7 @@ on:
     branches:
       - main
     paths:
-      - 'build/Lede_gdock_2/start-up/start'
+      - 'build/Lede_XiaoMi_cr660x/start-up/start'
 
 env:
   Github: https://github.com/${{github.repository}}
