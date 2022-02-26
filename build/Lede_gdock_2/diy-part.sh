@@ -65,3 +65,6 @@ rm -rf sha256sums
 EOF
 
 mkdir -p files/etc/hotplug.d/block && curl -fsSL https://raw.githubusercontent.com/281677160/openwrt-package/usb/block/10-mount > files/etc/hotplug.d/block/10-mount
+
+# 添加插件
+git clone https://github.com/sirpdboy/netspeedtest package/netspeedtest
