@@ -7,6 +7,6 @@
         \/      \/      \/             \/      \/      \/                                                                           
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
        Base on OpenWrt R21.10.* by lean & lienol
-       Kernel 5.4.* - gdstchdr 1.2
-       Packaged by gdstchdr on 2021-1-4
+       Kernel 5.4.* - gdstchdr 1.3
+       Packaged by gdstchdr on 2022-3-10
        SOC: IPQ4019	     BOARD: GDOCK-2
