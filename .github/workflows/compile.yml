@@ -40,9 +40,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [Lienol_source]
+        target: [Lede_XiaoMi_cr660x]
         
-        # [Lede_source,Lienol_source,Mortal_source,Tianling_source,openwrt_amlogic]
+        # [Lede_source,Lienol_source,Mortal_source,Tianling_source,openwrt_amlogic,Lede_XiaoMi_cr660x]
 
     steps:
     - name: 准备结束
