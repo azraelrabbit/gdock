@@ -59,7 +59,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [Lede_XiaoMi_cr660x]
+        target: [Lede_source]
 
         # [Lede_gdock_2,Lede_XiaoMi_cr660x,Lede_source,Lienol_source,Mortal_source,Tianling_source,openwrt_amlogic]
 
