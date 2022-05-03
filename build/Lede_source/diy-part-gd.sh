@@ -10,17 +10,17 @@
 
 
 cat >$NETIP <<-EOF
-uci set network.lan.ipaddr='192.168.10.'                      # IPv4 地址(openwrt后台地址)
-uci set network.lan.netmask='255.255.255.0'                   # IPv4 子网掩码
+uci set network.lan.ipaddr='192.168.10.1'                      # IPv4 地址(openwrt后台地址)
+uci set network.lan.netmask='255.255.255.0'                    # IPv4 子网掩码
 #uci set network.lan.gateway='192.168.1.1'                     # IPv4 网关
 #uci set network.lan.broadcast='192.168.2.255'                 # IPv4 广播
 #uci set network.lan.dns='223.5.5.5 114.114.114.114'           # DNS(多个DNS要用空格分开)
-uci set network.lan.delegate='0'                              # 去掉LAN口使用内置的 IPv6 管理(若用IPV6请把'0'改'1')
-uci set dhcp.@dnsmasq[0].filter_aaaa='1'                      # 禁止解析 IPv6 DNS记录(若用IPV6请把'1'改'0')
+uci set network.lan.delegate='0'                               # 去掉LAN口使用内置的 IPv6 管理(若用IPV6请把'0'改'1')
+uci set dhcp.@dnsmasq[0].filter_aaaa='1'                       # 禁止解析 IPv6 DNS记录(若用IPV6请把'1'改'0')
 
-#uci set dhcp.lan.ignore='1'                                  # 关闭DHCP功能（去掉uci前面的#生效）
-uci set system.@system[0].hostname='GDOCK-2'                  # 修改主机名称为OpenWrt-123
-#uci set ttyd.@ttyd[0].command='/bin/login -f root'           # 设置ttyd免帐号登录（去掉uci前面的#生效）
+#uci set dhcp.lan.ignore='1'                                   # 关闭DHCP功能（去掉uci前面的#生效）
+uci set system.@system[0].hostname='GDOCK-2'                   # 修改主机名称为OpenWrt-123
+#uci set ttyd.@ttyd[0].command='/bin/login -f root'            # 设置ttyd免帐号登录（去掉uci前面的#生效）
 
 # 如果有用IPV6的话,可以使用以下命令创建IPV6客户端(LAN口)（去掉全部代码uci前面#号生效）
 #uci set network.ipv6=interface
@@ -80,6 +80,8 @@ sed -i 's/"USB 打印服务器"/"打印服务"/g' `egrep "USB 打印服务器" -
 sed -i 's/"Web 管理"/"Web管理"/g' `egrep "Web 管理" -rl ./`
 sed -i 's/"管理权"/"改密码"/g' `egrep "管理权" -rl ./`
 sed -i 's/"带宽监控"/"监控"/g' `egrep "带宽监控" -rl ./`
+sed -i 's/"udpxy"/"组播服务器"/g' `egrep "udpxy" -rl ./`
+sed -i 's/"解除网易云音乐播放限制"/"网易云音乐"/g' `grep "解除网易云音乐播放限制" -rl ./`
 
 
 # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间（根据编译机型变化,自行调整需要删除的固件名称）
