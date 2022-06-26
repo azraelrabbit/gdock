@@ -7,6 +7,6 @@
         \/      \/      \/             \/      \/      \/                                                                           
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
        Base on OpenWrt R21.10.* by lean & lienol
-       Kernel 5.4.* - gdstchdr 1.2
-       Packaged by gdstchdr on 2021-12-14
+       Kernel 5.10 - gdstchdr 1.2
+       Packaged by gdstchdr on 2022-6-26
        SOC: MT7621AT       BOARD: xiaomi_cr660x
