@@ -15,20 +15,20 @@ uci set network.lan.netmask='255.255.255.0'                    # IPv4 子网掩�
 #uci set network.lan.gateway='192.168.1.1'                     # IPv4 网关
 #uci set network.lan.broadcast='192.168.2.255'                 # IPv4 广播
 #uci set network.lan.dns='223.5.5.5 114.114.114.114'           # DNS(多个DNS要用空格分开)
-uci set network.lan.delegate='0'                               # 去掉LAN口使用内置的 IPv6 管理(若用IPV6请把'0'改'1')
-uci set dhcp.@dnsmasq[0].filter_aaaa='1'                       # 禁止解析 IPv6 DNS记录(若用IPV6请把'1'改'0')
+uci set network.lan.delegate='1'                               # 去掉LAN口使用内置的 IPv6 管理(若用IPV6请把'0'改'1')
+uci set dhcp.@dnsmasq[0].filter_aaaa='0'                       # 禁止解析 IPv6 DNS记录(若用IPV6请把'1'改'0')
 
 #uci set dhcp.lan.ignore='1'                                   # 关闭DHCP功能（去掉uci前面的#生效）
 uci set system.@system[0].hostname='GDOCK-2'                   # 修改主机名称为OpenWrt-123
-#uci set ttyd.@ttyd[0].command='/bin/login -f root'            # 设置ttyd免帐号登录（去掉uci前面的#生效）
+uci set ttyd.@ttyd[0].command='/bin/login -f root'            # 设置ttyd免帐号登录（去掉uci前面的#生效）
 
 # 如果有用IPV6的话,可以使用以下命令创建IPV6客户端(LAN口)（去掉全部代码uci前面#号生效）
-#uci set network.ipv6=interface
-#uci set network.ipv6.proto='dhcpv6'
-#uci set network.ipv6.ifname='@lan'
-#uci set network.ipv6.reqaddress='try'
-#uci set network.ipv6.reqprefix='auto'
-#uci set firewall.@zone[0].network='lan ipv6'
+uci set network.ipv6=interface
+uci set network.ipv6.proto='dhcpv6'
+uci set network.ipv6.ifname='@lan'
+uci set network.ipv6.reqaddress='try'
+uci set network.ipv6.reqprefix='auto'
+uci set firewall.@zone[0].network='lan ipv6'
 EOF
 
 
@@ -87,11 +87,15 @@ sed -i 's/"解除网易云音乐播放限制"/"网易云音乐"/g' `grep "解除
 # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间（根据编译机型变化,自行调整需要删除的固件名称）
 cat >"$CLEAR_PATH" <<-EOF
 packages
+openwrt-ipq40xx-p2w_r619ac-128m-initramfs-fit-zImage.itb
+openwrt-ipq40xx-p2w_r619ac-128m.manifest
 config.buildinfo
 feeds.buildinfo
-openwrt-x86-64-generic-kernel.bin
-openwrt-x86-64-generic.manifest
-openwrt-x86-64-generic-squashfs-rootfs.img.gz
-sha256sums
 version.buildinfo
+sha256sums
+Source code (zip)
+Source code (tar.gz)
 EOF
+
+# 添加插件
+git clone https://github.com/pali/igmpproxy package/igmpproxy
