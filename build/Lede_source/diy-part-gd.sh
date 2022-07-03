@@ -98,4 +98,4 @@ Source code (tar.gz)
 EOF
 
 # 添加插件
-git clone https://github.com/pali/igmpproxy package/igmpproxy
+git clone https://github.com/pali/igmpproxy package/luci-app-igmpproxy
