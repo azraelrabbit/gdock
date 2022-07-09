@@ -85,14 +85,14 @@ sed -i 's/"解除网易云音乐播放限制"/"网易云音乐"/g' `grep "解除
 
 
 # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间（根据编译机型变化,自行调整需要删除的固件名称）
-cat >"$CLEAR_PATH" <<-EOF
-packages
-openwrt-ipq40xx-p2w_r619ac-128m-initramfs-fit-zImage.itb
-openwrt-ipq40xx-p2w_r619ac-128m.manifest
-config.buildinfo
-feeds.buildinfo
-version.buildinfo
-sha256sums
-Source code (zip)
-Source code (tar.gz)
-EOF
+#cat >"$CLEAR_PATH" <<-EOF
+#packages
+#openwrt-ipq40xx-p2w_r619ac-128m-initramfs-fit-zImage.itb
+#openwrt-ipq40xx-p2w_r619ac-128m.manifest
+#config.buildinfo
+#feeds.buildinfo
+#version.buildinfo
+#sha256sums
+#Source code (zip)
+#Source code (tar.gz)
+#EOF
