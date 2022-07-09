@@ -96,6 +96,3 @@ sha256sums
 Source code (zip)
 Source code (tar.gz)
 EOF
-
-# 添加插件
-git clone https://github.com/pali/igmpproxy package/luci-app-igmpproxy
