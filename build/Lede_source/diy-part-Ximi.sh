@@ -8,7 +8,7 @@
 
 
 cat >$NETIP <<-EOF
-uci set network.lan.ipaddr='192.168.5.1'                      # IPv4 地址(openwrt后台地址)
+uci set network.lan.ipaddr='192.168.10.1'                     # IPv4 地址(openwrt后台地址)
 uci set network.lan.netmask='255.255.255.0'                   # IPv4 子网掩码
 #uci set network.lan.gateway='192.168.2.1'                    # 旁路由设置 IPv4 网关（去掉uci前面的#生效）
 #uci set network.lan.broadcast='192.168.2.255'                # 旁路由设置 IPv4 广播（去掉uci前面的#生效）
@@ -56,7 +56,7 @@ sed -i "/exit 0/i\sed -i '/coremark/d' /etc/crontabs/root" "$FIN_PATH"
 
 
 # 修改默认内核（所有机型都适用，只要您编译的机型源码附带了其他内核，请至编译说明的第12条查看）
-#sed -i 's/PATCHVER:=5.15/PATCHVER:=5.10/g' target/linux/x86/Makefile
+sed -i 's/PATCHVER:=5.4/PATCHVER:=5.10/g' target/linux/ramips/Makefile
 
 
 # K3专用，编译K3的时候只会出K3固件（其他机型也适宜,把phicomm_k3和对应路径替换一下，名字要绝对正确才行）
@@ -81,15 +81,18 @@ sed -i 's/"Web 管理"/"Web管理"/g' `egrep "Web 管理" -rl ./`
 sed -i 's/"管理权"/"改密码"/g' `egrep "管理权" -rl ./`
 sed -i 's/"带宽监控"/"监控"/g' `egrep "带宽监控" -rl ./`
 
+# 添加额外软件包
+svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-socat package/luci-app-socat
+
 
 # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间（根据编译机型变化,自行调整需要删除的固件名称）
 cat >"$CLEAR_PATH" <<-EOF
 packages
 config.buildinfo
 feeds.buildinfo
-openwrt-x86-64-generic-kernel.bin
-openwrt-x86-64-generic.manifest
-openwrt-x86-64-generic-squashfs-rootfs.img.gz
+#openwrt-x86-64-generic-kernel.bin
+#openwrt-x86-64-generic.manifest
+#openwrt-x86-64-generic-squashfs-rootfs.img.gz
 sha256sums
 version.buildinfo
 EOF
