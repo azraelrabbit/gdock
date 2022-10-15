@@ -6,6 +6,6 @@
  \______  /\____ | /____  > |__|   \___  >|___|  /\____ |  |__|                                                                      
         \/      \/      \/             \/      \/      \/                                                                           
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-       Base on OpenWrt R22.10.* by coolsnowwolf/lede
+        Base on OpenWrt R22.10.* by coolsnowwolf/lede
 
-       SOC: MT7621AT       BOARD: xiaomi_cr660x
+           Xiaomi Mi Router CR660x    SOC: MT7621
