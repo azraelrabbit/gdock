@@ -96,3 +96,7 @@ openwrt-x86-64-generic-squashfs-rootfs.img.gz
 sha256sums
 version.buildinfo
 EOF
+
+# 添加插件
+git clone https://github.com/pali/igmpproxy package/igmpproxy
+git clone https://github.com/1wrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
