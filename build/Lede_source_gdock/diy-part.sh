@@ -99,5 +99,6 @@ EOF
 
 # 添加插件
 #git clone https://github.com/pali/igmpproxy package/igmpproxy
-git clone https://github.com/1wrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
-git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-advanced
+git clone https://github.com/1wrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy       # 广告拦截
+git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-advanced       # 系统高级设置
+git clone https://github.com/sirpdboy/netspeedtest package/netspeedtest                     # 网络速度测试
