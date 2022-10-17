@@ -90,9 +90,9 @@ cat >"$CLEAR_PATH" <<-EOF
 packages
 config.buildinfo
 feeds.buildinfo
-ipq40xx-p2w_r619ac-128m-initramfs-fit-zImage.itb
-ipq40xx-p2w_r619ac-128m-squashfs-nand-factory.ubi
-ipq40xx-p2w_r619ac-128m.manifest
+Lede-ipq40xx-p2w_r619ac-128m-initramfs-fit-zImage.itb
+Lede-ipq40xx-p2w_r619ac-128m-squashfs-nand-factory.ubi
+1017-Lede-ipq40xx-p2w_r619ac-128m.manifest
 sha256sums
 version.buildinfo
 EOF
