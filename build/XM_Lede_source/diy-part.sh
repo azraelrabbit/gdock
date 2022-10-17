@@ -56,7 +56,7 @@ sed -i "/exit 0/i\sed -i '/coremark/d' /etc/crontabs/root" "$FIN_PATH"
 
 
 # 修改默认内核（所有机型都适用，只要您编译的机型源码附带了其他内核，请至编译说明的第12条查看）
-sed -i 's/PATCHVER:=5.4/PATCHVER:=5.10/g' target/linux/ramips/Makefile
+#sed -i 's/PATCHVER:=5.4/PATCHVER:=5.10/g' target/linux/ramips/Makefile
 
 
 # 更改使用OpenClash的分支代码，把下面的master改成dev就使用dev分支，改master就是用master分支，改错的话就默认使用master分支
@@ -83,6 +83,7 @@ sed -i 's/"USB 打印服务器"/"打印服务"/g' `egrep "USB 打印服务器" -
 sed -i 's/"Web 管理"/"Web管理"/g' `egrep "Web 管理" -rl ./`
 sed -i 's/"管理权"/"改密码"/g' `egrep "管理权" -rl ./`
 sed -i 's/"带宽监控"/"监控"/g' `egrep "带宽监控" -rl ./`
+sed -i 's/"Socat"/"端口转发"/g' `egrep "Socat" -rl ./`
 
 
 # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间（根据编译机型变化,自行调整需要删除的固件名称）
@@ -90,9 +91,16 @@ cat >"$CLEAR_PATH" <<-EOF
 packages
 config.buildinfo
 feeds.buildinfo
-openwrt-x86-64-generic-kernel.bin
-openwrt-x86-64-generic.manifest
-openwrt-x86-64-generic-squashfs-rootfs.img.gz
+Lede-ramips-mt7621-xiaomi_mi-router-cr660x-initramfs-kernel.bin
+Lede-ramips-mt7621-xiaomi_mi-router-cr660x.manifest
+Lede-ramips-mt7621-xiaomi_mi-router-cr660x-squashfs-factory.bin
 sha256sums
 version.buildinfo
 EOF
+
+# 添加插件
+#git clone https://github.com/pali/igmpproxy package/igmpproxy
+git clone https://github.com/1wrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy       # 广告拦截
+git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-advanced       # 系统高级设置
+git clone https://github.com/sirpdboy/netspeedtest package/netspeedtest                     # 网络速度测试
+git clone https://github.com/sirpdboy/luci-app-wizard package/wizard                        # 设置向导
