@@ -102,3 +102,4 @@ EOF
 git clone https://github.com/1wrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy       # 广告拦截
 git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-advanced       # 系统高级设置
 git clone https://github.com/sirpdboy/netspeedtest package/netspeedtest                     # 网络速度测试
+git clone https://github.com/sirpdboy/luci-app-wizard package/luci-app-wizard               # 设置向导
