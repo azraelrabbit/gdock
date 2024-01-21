@@ -6,7 +6,6 @@
  \______  /\____ | /____  > |__|   \___  >|___|  /\____ |  |__|                                                                      
         \/      \/      \/             \/      \/      \/                                                                           
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-       Base on OpenWrt R21.10.* by lean & lienol
-       Kernel 5.4.* - gdstchdr 1.2
-       Packaged by gdstchdr on 2021-12-14
-       SOC: MT7621AT       BOARD: xiaomi_cr660x
+        Base on OpenWrt R22.10.* by coolsnowwolf/lede
+
+           Xiaomi Mi Router CR660x    SOC: MT7621
